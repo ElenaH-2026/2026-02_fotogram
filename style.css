@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    background-color: rgb(1, 14, 3);
     color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
@@ -26,6 +27,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-shadow: 0px 0px 4px rgb(212, 237, 119);
+}
+
 h1, h2 {
     text-align: center;
 }
@@ -35,6 +40,11 @@ h1, h2 {
     padding: 8px;
 }
 
+.LogosIcons:hover {
+    filter: drop-shadow(0px 0px 4px rgb(212, 237, 119));
+}
+
+
 button {
     cursor: pointer;
 }
@@ -42,9 +52,19 @@ button {
 /* css -> header and footer */
 
 header, footer {
-    background-color: rgb(24, 43, 26);
+    background-color: rgb(81, 100, 10);
     display: flex;
     justify-content: center;
+}
+
+header {
+    border-radius: 0 0 8px 48px;
+}
+
+footer {
+    border-radius: 8px 48px 0 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .ContainerHeaderFooter {
@@ -69,7 +89,7 @@ header, footer {
     height: 48px;
 }
 
-.FooterCopyright {
+.ChildContainerFooter {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -78,7 +98,6 @@ header, footer {
 /* css -> main */
 
 main {
-    background-color: rgb(1, 14, 3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,12 +136,15 @@ main {
     width: 100px;
 }
 
+.ImagePhotoGallery:hover {
+    border: 1px solid rgb(212, 237, 119);
+}
+
 /* css -> overlay */
 
 dialog {
-    background-color: rgb(80, 150, 87);
+    background-color: rgb(212, 237, 119);
     color: rgba(255, 255, 255, 1);
-    position: absolute;
     top: 160px;
     bottom: 120px;
     justify-self: center;
