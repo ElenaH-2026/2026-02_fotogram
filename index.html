@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram - Elena und Michi</title>
+    <link rel="shortcut icon" href="./img/logo-fotogram.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="MarginLeftRight ContainerHeaderFooter">
+            <a class="HeaderLinks" href="index.html">
+                <img class="HeaderLogo"
+                    src="./img/logo-fotogram.svg" 
+                    alt="Fotogram Logo"/>
+                Fotogram<br>Elena und Michi
+            </a>
+            <a class="HeaderLinks" href="#">
+                <img class="LogosIcons" 
+                    src="./img/icon-mail.svg" 
+                    alt="E-Mail Symbol zur Kontaktaufnahme"/>
+                Kontakt
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="MarginLeftRight ContentLimitation ContainerH1">
+            <h1>Elenas und Michis Reisefotos</h1>
+        </div>
+        <div class="MarginLeftRight ContentLimitation MainContainerPhotoGallery">
+            <section class="SectionPhotoGallery">
+                <h2>Elba</h2>
+                <div class="ImageContainerPhotoGallery">
+                    <img onclick="openDialogPhotoOverlay()" class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                </div>
+            </section>
+            <section class="SectionPhotoGallery">
+                <h2>Neuseeland und Fiji</h2>
+                <div class="ImageContainerPhotoGallery">
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                </div>
+            </section>
+            <section class="SectionPhotoGallery">
+                <h2>USA</h2>
+                <div class="ImageContainerPhotoGallery">
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                </div>
+            </section>
+            <section class="SectionPhotoGallery">
+                <h2>Weitere Orte</h2>
+                <div class="ImageContainerPhotoGallery">
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                    <img class="ImagePhotoGallery"
+                        src="./img/Musterbild.jpg" 
+                        alt=""/>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="#DialogPhotoOverlay">
+            <div class="ContainerDialog">
+                <header>
+                    <h3>Foto-Beschreibung</h3>
+                    <button onclick="closeDialogPhotoOverlay()">x</button>
+                </header>
+                <section class="SectionPhotoOverlay">
+                    <img class="ImagePhotoOverlay"
+                            src="./img/Musterbild.jpg" 
+                            alt=""/>
+                </section>
+                <footer>
+                    <button>(<=)</button>
+                    <span>y/x</span>
+                    <button>(=>)</button>
+                </footer>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="MarginLeftRight ContainerHeaderFooter">
+            <div class="FooterCopyright">
+                <span>Fotos:</span>
+                <img 
+                    src="./img/copyright.svg" 
+                    alt="Copyright Symbol"/>
+                <span>Michael Hiener</span>
+            </div>
+            <div>
+                <a href="#">
+                    <img class="LogosIcons" 
+                        src="./img/logo-github-invertocat-white.svg" 
+                        alt="GitHub Logo"/>
+                </a>
+                <a href="#">
+                    <img class="LogosIcons" 
+                        src="./img/icon-mail.svg" 
+                        alt="E-Mail Symbol zur Kontaktaufnahme"/>
+                </a>
+                <a href="#">
+                    <img class="LogosIcons" 
+                        src="./img/logo-linkedin-white.png" 
+                        alt="LinkedIn Logo"/>
+                </a>
+            </div>
+            <a href="#">Impressum</a>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

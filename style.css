@@ -1,0 +1,175 @@
+/* css -> general */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.ContentLimitation {
+    max-width: 1440px;
+}
+
+.MarginLeftRight {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.LogosIcons {
+    height: 32px;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* css -> header and footer */
+
+header, footer {
+    background-color: rgb(24, 43, 26);
+    display: flex;
+    justify-content: center;
+}
+
+.ContainerHeaderFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    max-width: 1920px;
+}
+
+.HeaderLinks {
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.HeaderLogo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    height: 48px;
+}
+
+.FooterCopyright {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* css -> main */
+
+main {
+    background-color: rgb(1, 14, 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.ContainerH1 {
+    display: flex;
+    justify-content: center;
+}
+
+.MainContainerPhotoGallery {
+    display: flex;
+    gap: 24px;
+}
+
+.SectionPhotoGallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ImageContainerPhotoGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ImagePhotoGallery {
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px 24px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    width: 100px;
+}
+
+/* css -> overlay */
+
+dialog {
+    background-color: rgb(80, 150, 87);
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 160px;
+    bottom: 120px;
+    justify-self: center;
+    margin: 0;
+    border: 0;
+    border-radius: 8px 48px;
+    padding: 40px;
+    max-width: 80%;
+    height: auto;
+}
+
+.ContainerDialog {
+    display: flex;
+    flex-direction: column;
+}
+
+dialog header {
+    justify-content: space-between;
+}
+
+dialog footer {
+    gap: 80px;
+}
+
+.SectionPhotoOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+    flex: 1;
+}
+
+.ImagePhotoOverlay {
+    max-width: 100%;
+    max-height: fit-content;
+    height: auto;
+    width: auto;
+}
+
+
+
+
+
+/* .SectionPhotoGallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+} */
