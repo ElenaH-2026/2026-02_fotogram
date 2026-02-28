@@ -9,7 +9,7 @@
     <script type="text/javascript" src="./photos.js"></script>
     
 </head>
-<body>
+<body onload="initDisplayPhotoGallery()">
     <header>
         <div class="MarginLeftRight ContainerHeaderFooter">
             <a class="HeaderLinks" href="index.html">
@@ -29,59 +29,35 @@
 
     <main onclick="closeDialogPhotoOverlay()">
         <div class="MarginLeftRight ContentLimitation ContainerH1">
-            <h1 onclick="initDisplayPhotoGallery()">Elenas und Michis Reisefotos</h1>
+            <h1>Elenas und Michis Reisefotos</h1>
         </div>
         <div class="MarginLeftRight ContentLimitation MainContainerPhotoGallery">
             <section class="SectionPhotoGallery">
                 <h2>Elba</h2>
+                <!-- Section-id must be identical to foldername AND key in photos.js-file !! -->
                 <div id="elba"
                     class="ImageContainerPhotoGallery">
                 </div>
             </section>
             <section class="SectionPhotoGallery">
-                <h2 onclick="displayPhotoGallery('nz-fiji')">Neuseeland und Fiji</h2>
+                <h2>Neuseeland und Fiji</h2>
+                <!-- Section-id must be identical to foldername AND key in photos.js-file !! -->
                 <div id="nz-fiji"
                     class="ImageContainerPhotoGallery">
                 </div>
             </section>
             <section class="SectionPhotoGallery">
                 <h2>USA und Hawaii</h2>
-                <div id="#usa-hawaii"
+                <!-- Section-id must be identical to foldername AND key in photos.js-file !! -->
+                <div id="usa-hawaii"
                     class="ImageContainerPhotoGallery">
-                    <img onclick="openDialogPhotoOverlay(event)"
-                        class="ImagePhotoGallery"
-                        src="./photos/elba/elba-cavo-castle-sunrise-20251006.jpg" 
-                        alt=""/>
-                    <img onclick="openDialogPhotoOverlay(event)"
-                        class="ImagePhotoGallery"
-                        src="./photos/elba/elba-cavo-sunrise-20251010.jpg" 
-                        alt=""/>
-                    <img onclick="openDialogPhotoOverlay(event)"
-                        class="ImagePhotoGallery"
-                        src="./photos/elba/elba-cavo-castle-sunrise-20251006.jpg" 
-                        alt=""/>
-                    <img onclick="openDialogPhotoOverlay(event)"
-                        class="ImagePhotoGallery"
-                        src="./photos/elba/elba-cavo-sunrise-20251010.jpg" 
-                        alt=""/>
                 </div>
             </section>
             <section class="SectionPhotoGallery">
                 <h2>Weitere Orte</h2>
-                <div id="#others"
+                <!-- Section-id must be identical to foldername AND key in photos.js-file !! -->
+                <div id="other"
                     class="ImageContainerPhotoGallery">
-                    <img class="ImagePhotoGallery"
-                        src="./photos/elba/elba-cavo-castle-sunrise-20251006.jpg" 
-                        alt=""/>
-                    <img class="ImagePhotoGallery"
-                        src="./photos/elba/elba-cavo-sunrise-20251010.jpg" 
-                        alt=""/>
-                    <img class="ImagePhotoGallery"
-                        src="./photos/elba/elba-cavo-castle-sunrise-20251006.jpg" 
-                        alt=""/>
-                    <img class="ImagePhotoGallery"
-                        src="./photos/elba/elba-cavo-sunrise-20251010.jpg" 
-                        alt=""/>
                 </div>
             </section>
         </div>
