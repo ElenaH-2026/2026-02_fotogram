@@ -185,7 +185,9 @@ dialog footer {
     width: auto;
 }
 
-
+figcaption {
+    color: rgb(81, 100, 10);
+}
 
 
 
