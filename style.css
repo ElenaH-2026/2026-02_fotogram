@@ -138,6 +138,7 @@ main {
 
 .ImagePhotoGallery:hover {
     border: 1px solid rgb(212, 237, 119);
+    filter: drop-shadow(0px 0px 4px rgb(212, 237, 119));
 }
 
 /* css -> overlay */

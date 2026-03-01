@@ -2,10 +2,11 @@ const DIALOG_REF = document.getElementById("#DialogPhotoOverlay");
 
 
 function openDialogPhotoOverlay(no_bubbling) {
-    DIALOG_REF.showModal();
     no_bubbling.stopPropagation();
+    DIALOG_REF.showModal();
 }
 
+// Warum schließt sich das Fenster, auch wenn ich auf den Header/Footer oder das Dialogfenster selbst klicke??
 function closeDialogPhotoOverlay() {
     DIALOG_REF.close();
 }
@@ -26,10 +27,14 @@ function displayPhotoGallery(foldername) {
         let photo_filename = PHOTOS[i].filename;
         let photo_description = PHOTOS[i].description;
             
-        photo.innerHTML += `
-            <img  onclick="openDialogPhotoOverlay(event)"
-                class="ImagePhotoGallery"
-                src="./photos/${foldername}/${photo_filename}" 
-                alt="Foto: ${photo_description}"/>`;
+        photo.innerHTML += getImage(foldername, photo_filename, photo_description);
     }
+}
+
+function getImage(foldername, photo_filename, photo_description) {
+    return `
+        <img  onclick="openDialogPhotoOverlay(event)"
+            class="ImagePhotoGallery"
+            src="./photos/${foldername}/${photo_filename}" 
+            alt="Foto: ${photo_description}"/>`;
 }
