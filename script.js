@@ -1,5 +1,9 @@
 const DIALOG_REF = document.getElementById("#DialogPhotoOverlay");
-
+const FOLDER_LIST = document.getElementsByClassName("ImageContainerPhotoGallery");
+let folder = "";
+let photos_per_folder = All_PHOTOS[folder];
+let photo = "";
+let photo_overlay = document.getElementById("#PhotoOverlay");
 
 function openDialogPhotoOverlay(event_no_bubbling) {
     event_no_bubbling.stopPropagation();
@@ -12,39 +16,38 @@ function closeDialogPhotoOverlay() {
 }
 
 function initDisplayPhotoGallery() {
-    const REF_LIST = document.getElementsByClassName("ImageContainerPhotoGallery");
 
-    for (let i = 0; i < REF_LIST.length; i++) {
-        displayPhotoGallery(REF_LIST[i].id);
+    for (let i = 0; i < FOLDER_LIST.length; i++) {
+        folder = FOLDER_LIST[i].id;
+        photo = document.getElementById(folder);
+        getPhoto(folder);
         }   
     }
 
-function displayPhotoGallery(foldername) {
-    const PHOTOS = All_Photos[foldername];
-    let photo = document.getElementById(foldername);
-    let photo_overlay = document.getElementById("#PhotoOverlay");
+function getPhoto(foldername) {
+    photos_per_folder = All_PHOTOS[foldername];
 
-    for (let i = 0; i < PHOTOS.length; i++) {
-        let photo_src = "./photos/" + foldername + "/" + PHOTOS[i].filename;
-        let photo_alt = "Foto: " + PHOTOS[i].description;
-        let photo_description = PHOTOS[i].description;
-        let photo_copyright = "&#169 " + PHOTOS[i].copyright;
+    for (let i = 0; i < photos_per_folder.length; i++) {
+        let photo_src = "./photos/" + foldername + "/" + photos_per_folder[i].filename;
+        let photo_alt = "Foto: " + photos_per_folder[i].description;
+        let photo_description = photos_per_folder[i].description;
+        let photo_copyright = "&#169 " + photos_per_folder[i].copyright;
             
-        photo.innerHTML += getPhotoThumbnail(photo_src, photo_alt);
-        photo_overlay.innerHTML = getPhotoOverlay(photo_description,photo_src, photo_alt, photo_copyright);
+        photo.innerHTML += displayPhotoThumbnail(photo_src, photo_alt);
+        photo_overlay.innerHTML = displayPhotoOverlay(photo_description,photo_src, photo_alt, photo_copyright);
     }
 }
 
-function getPhotoThumbnail(photo_src, photo_alt) {
+function displayPhotoThumbnail(photo_src, photo_alt) {
     return `
-        <img  onclick="openDialogPhotoOverlay(event)"
+        <img onclick="openDialogPhotoOverlay(event)"
             class="ImagePhotoGallery"
             src=${photo_src}
             alt=${photo_alt}
         />`;
 }
 
-function getPhotoOverlay(photo_description, photo_src, photo_alt, photo_copyright) {
+function displayPhotoOverlay(photo_description, photo_src, photo_alt, photo_copyright) {
     return `
         <header>
             <h3>${photo_description}</h3>

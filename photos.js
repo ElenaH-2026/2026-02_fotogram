@@ -4,7 +4,7 @@ const ELENA = "Elena Hiener";
 
 // Key must be identical to foldername AND container-id !!
 
-const All_Photos = {
+const All_PHOTOS = {
     "elba":[
         {"year":2025, "copyright":MICHI, "description":"Elba - Cavo - Sonnenaufgang", "filename":"elba-20251010-cavo-sonnenaufgang.jpg"},
         {"year":2025, "copyright":MICHI, "description":"Elba - Schloss in Cavo - Sonnenaufgang", "filename":"elba-20251006-cavo-schloss-sonnenaufgang.jpg"},
