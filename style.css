@@ -189,6 +189,10 @@ dialog footer {
     flex: 1;
 }
 
+figure {
+    margin: 0;
+}
+
 .ImagePhotoOverlay {
     max-width: 100%;
     max-height: fit-content;
