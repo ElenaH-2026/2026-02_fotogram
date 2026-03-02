@@ -2,7 +2,7 @@
 const MICHI = "Michael Hiener";
 const ELENA = "Elena Hiener";
 
-// Key must be identical to foldername AND section-id !!
+// Key must be identical to foldername AND container-id !!
 
 const All_Photos = {
     "elba":[

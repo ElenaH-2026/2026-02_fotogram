@@ -35,53 +35,37 @@
         <div class="MarginLeftRight ContentLimitation MainContainerPhotoGallery">
             <section class="SectionPhotoGallery">
                 <h2>Elba</h2>
-                <!-- Section-id must be identical to foldername AND key in photos.js-file !! -->
-                <div id="elba"
-                    class="ImageContainerPhotoGallery">
+                <!-- Container-id must be identical to foldername AND key in photos.js-file !! -->
+                <div class="ImageContainerPhotoGallery"
+                    id="elba">
                 </div>
             </section>
             <section class="SectionPhotoGallery">
                 <h2>Neuseeland und Fiji</h2>
-                <!-- Section-id must be identical to foldername AND key in photos.js-file !! -->
-                <div id="nz-fiji"
-                    class="ImageContainerPhotoGallery">
+                <!-- Container-id must be identical to foldername AND key in photos.js-file !! -->
+                <div class="ImageContainerPhotoGallery"
+                    id="nz-fiji">
                 </div>
             </section>
             <section class="SectionPhotoGallery">
                 <h2>USA und Hawaii</h2>
-                <!-- Section-id must be identical to foldername AND key in photos.js-file !! -->
-                <div id="usa-hawaii"
-                    class="ImageContainerPhotoGallery">
+                <!-- Container-id must be identical to foldername AND key in photos.js-file !! -->
+                <div class="ImageContainerPhotoGallery"
+                    id="usa-hawaii">
                 </div>
             </section>
             <section class="SectionPhotoGallery">
                 <h2>Weitere Orte</h2>
-                <!-- Section-id must be identical to foldername AND key in photos.js-file !! -->
-                <div id="other"
-                    class="ImageContainerPhotoGallery">
+                <!-- Container-id must be identical to foldername AND key in photos.js-file !! -->
+                <div class="ImageContainerPhotoGallery"
+                    id="other">
                 </div>
             </section>
         </div>
 
         <dialog id="#DialogPhotoOverlay">
-            <div class="ContainerDialog">
-                <header>
-                    <h3>Foto Beschreibung</h3>
-                    <button onclick="closeDialogPhotoOverlay()">x</button>
-                </header>
-                <section class="SectionPhotoOverlay">
-                    <figure>
-                        <img class="ImagePhotoOverlay"
-                                src="./img/logo-fotogram.svg" 
-                                alt=""/>
-                        <figcaption>&#169 Michi</figcaption>
-                    </figure>
-                </section>
-                <footer>
-                    <button>(<=)</button>
-                    <span>y/x</span>
-                    <button>(=>)</button>
-                </footer>
+            <div class="ContainerDialog"
+                id="#PhotoOverlay">
             </div>
         </dialog>
     </main>

@@ -145,7 +145,7 @@ main {
 
 dialog {
     background-color: rgb(212, 237, 119);
-    color: rgba(255, 255, 255, 1);
+    color: rgb(1, 14, 3);
     top: 160px;
     bottom: 120px;
     justify-self: center;
@@ -160,6 +160,7 @@ dialog {
 .ContainerDialog {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 dialog header {
@@ -186,9 +187,9 @@ dialog footer {
     width: auto;
 }
 
-figcaption {
+/* figcaption {
     color: rgb(81, 100, 10);
-}
+} */
 
 
 
