@@ -41,13 +41,21 @@ a:hover {
 }
 
 h1, h2 {
-    
     text-align: center;
+    margin: 0;
+    padding: 16px;
 }
 
+.ShowMobile {
+    display: none;
+}
+
+/* github icon: 25% padding needed */
 .LogosIcons {
     height: 32px;
-    padding: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
 }
 
 .LogosIcons:hover {
@@ -62,9 +70,11 @@ button {
 /* css -> header and footer */
 
 header, footer {
-    background-color: var(--color-middle);
+    background-color: var(--color-dark);
     display: flex;
     justify-content: center;
+    border: 1px solid var(--color-light);
+    filter: drop-shadow(var(--shadow));
 }
 
 header {
@@ -136,7 +146,8 @@ main {
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 80px;
+    top: 88px;
+    width: 100%;
 }
 
 .MainContainerPhotoGallery {
@@ -175,13 +186,14 @@ main {
 /* css -> overlay */
 
 dialog {
-    background-color: var(--color-light);
-    color: var(--color-dark);
+    background-color: var(--color-dark);
+    color: var(--color-light);
     justify-self: center;
-    margin: 160px 80px 80px;
-    border: 0;
+    margin: 160px 40px 80px;
+    border: 1px solid var(--color-light);
     border-radius: 8px 48px;
-    padding: 40px;
+    filter: drop-shadow(var(--shadow));
+    padding: 0 24px;
     height: auto;
     width: auto;
 }
@@ -195,7 +207,9 @@ dialog {
 }
 
 dialog header {
+    background-color: var(--color-dark);
     justify-content: space-between;
+    border: 1px solid var(--color-light);
 }
 
 dialog footer {
@@ -232,6 +246,9 @@ figure {
 
 
 .ImagePhotoOverlay {
+    border-radius: 4px 24px;
+    filter: drop-shadow(var(--shadow));
+    padding-bottom: 8px;
     width: auto;
     height: auto;
     max-width: 100%;
@@ -239,4 +256,72 @@ figure {
     
     /* aspect-ratio: 1 / 1;
     object-fit: contain; */
+}
+
+@media (max-width: 970px) {
+    .MainContainerPhotoGallery {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    dialog {
+        margin-left: 32px;
+        margin-right: 32px;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .ChildContainerFooter {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    dialog {
+        margin-left: 24px;
+        margin-right: 24px;
+        padding: 0 12px;
+    }
+
+    dialog footer {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .PaddingLeftRight {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .HideMobile {
+        display: none;
+    }
+
+    .ShowMobile {
+        display: block;
+    }
+
+    dialog {
+        margin-left: 16px;
+        margin-right: 16px;
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 410px) {
+    .PaddingLeftRight {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .MobileLogosIcons {
+        height: 24px;
+    }
+
+    dialog {
+        margin-left: 12px;
+        margin-right: 12px;
+        padding: 0 4px;
+    }
 }

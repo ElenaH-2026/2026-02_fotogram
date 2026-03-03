@@ -32,7 +32,7 @@ function getPhoto(foldername) {
         let photo_alt = "Foto: " + photos_per_folder[i].description;
         let photo_description = photos_per_folder[i].description;
         let photo_copyright = "&#169 " + photos_per_folder[i].copyright;
-        let photo_nr = photos_per_folder[i].folder + ": " + (i+1) + " von " + photos_per_folder.length;
+        let photo_nr = photos_per_folder[i].folder + ":<br>" + (i+1) + " von " + photos_per_folder.length;
         
         photos_thumbnail.innerHTML += displayPhotoThumbnail(photo_id, photo_src, photo_alt, photo_description, photo_copyright, photo_nr);
     }

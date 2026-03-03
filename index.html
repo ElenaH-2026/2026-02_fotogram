@@ -16,21 +16,22 @@
                 <img class="HeaderLogo"
                     src="./img/logo-fotogram.svg" 
                     alt="Fotogram Logo"/>
-                Fotogram<br>Elena und Michi
+                Fotogram<br>Elena & Michi
             </a>
             <a class="HeaderLinks" href="#">
+                <span class="HideMobile">Kontakt</span>
                 <img class="LogosIcons" 
                     src="./img/icon-mail.svg" 
                     alt="E-Mail Symbol zur Kontaktaufnahme"/>
-                Kontakt
             </a>
         </div>
     </header>
 
     <!-- Warum schließt sich das Fenster, auch wenn ich auf den Header/Footer oder das Dialogfenster selbst klicke?? -->
     <main>
-        <div class="PaddingLeftRight ContentLimitation ContainerH1">
-            <h1>Elenas und Michis Reisefotos</h1>
+        <div class="ContentLimitation ContainerH1">
+            <h1 class="HideMobile PaddingLeftRight">Elenas & Michis Reisefotos</h1>
+            <h1 class="ShowMobile PaddingLeftRight">Reisefotos</h1>
         </div>
         <div class="PaddingLeftRight ContentLimitation MainContainerPhotoGallery">
             <section class="SectionPhotoGallery">
@@ -74,32 +75,30 @@
         <div class="PaddingLeftRight ContainerHeaderFooter">
             <div class="ChildContainerFooter">
                 <span>Fotos:</span>
-                <img 
-                    src="./img/copyright.svg" 
-                    alt="Copyright Symbol"/>
-                <span>M./E. Hiener</span>
+                <span class="HideMobile">&#169 M. & E. Hiener</span>
+                <span class="ShowMobile">&#169 M. & E. H.</span>
             </div>
             <div>
                 <a target="_blank" href="https://github.com/ElenaH-2026">
-                    <img class="LogosIcons" 
+                    <img class="MobileLogosIcons LogosIcons" 
                         src="./img/logo-github-invertocat-white.svg" 
                         alt="GitHub Logo"/>
                 </a>
-                <a href="#">
+                <a class="HideMobile" href="#">
                     <img class="LogosIcons" 
                         src="./img/icon-mail.svg" 
                         alt="E-Mail Symbol zur Kontaktaufnahme"/>
                 </a>
                 <a target="_blank" href="https://de.linkedin.com/in/elena-hiener">
-                    <img class="LogosIcons" 
+                    <img class="MobileLogosIcons LogosIcons" 
                         src="./img/logo-linkedin-white.png" 
                         alt="LinkedIn Logo"/>
                 </a>
             </div>
             <div class="ChildContainerFooter">
                 <a href="./impressum.html">Impressum</a>
-                |
-                <a href="./datenschutz.html">Datenschutz</a>
+                <span class="HideMobile">&#8226</span>
+                <a class="HideMobile" href="./datenschutz.html">Datenschutz</a>
             </div>
         </div>
     </footer>
