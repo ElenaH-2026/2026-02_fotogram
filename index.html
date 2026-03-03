@@ -10,8 +10,8 @@
     
 </head>
 <body onload="initDisplayPhotoGallery()">
-    <header>
-        <div class="MarginLeftRight ContainerHeaderFooter">
+    <header class="PositionFixedHeader">
+        <div class="PaddingLeftRight ContainerHeaderFooter">
             <a class="HeaderLinks" href="index.html">
                 <img class="HeaderLogo"
                     src="./img/logo-fotogram.svg" 
@@ -28,11 +28,11 @@
     </header>
 
     <!-- Warum schließt sich das Fenster, auch wenn ich auf den Header/Footer oder das Dialogfenster selbst klicke?? -->
-    <main onclick="closeDialogPhotoOverlay()">
-        <div class="MarginLeftRight ContentLimitation ContainerH1">
+    <main>
+        <div class="PaddingLeftRight ContentLimitation ContainerH1">
             <h1>Elenas und Michis Reisefotos</h1>
         </div>
-        <div class="MarginLeftRight ContentLimitation MainContainerPhotoGallery">
+        <div class="PaddingLeftRight ContentLimitation MainContainerPhotoGallery">
             <section class="SectionPhotoGallery">
                 <h2>Elba</h2>
                 <!-- Container-id must be identical to foldername AND key in photos.js-file !! -->
@@ -63,15 +63,15 @@
             </section>
         </div>
 
-        <dialog id="#DialogPhotoOverlay">
+        <dialog closedby="any" id="#DialogPhotoOverlay">
             <div class="ContainerDialog"
                 id="#PhotoOverlay">
             </div>
         </dialog>
     </main>
 
-    <footer>
-        <div class="MarginLeftRight ContainerHeaderFooter">
+    <footer class="PositionFixedFooter">
+        <div class="PaddingLeftRight ContainerHeaderFooter">
             <div class="ChildContainerFooter">
                 <span>Fotos:</span>
                 <img 

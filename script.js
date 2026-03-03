@@ -3,8 +3,7 @@ const FOLDER_LIST = document.getElementsByClassName("ImageContainerPhotoGallery"
 let photos_thumbnail = "";
 let photo_overlay = document.getElementById("#PhotoOverlay");
 
-function openDialogPhotoOverlay(event_no_bubbling, photo_src, photo_alt, photo_description, photo_copyright, photo_nr) {
-    event_no_bubbling.stopPropagation();
+function openDialogPhotoOverlay(photo_src, photo_alt, photo_description, photo_copyright, photo_nr) {
     DIALOG_REF.showModal();
 
     photo_overlay.innerHTML = displayPhotoOverlay(photo_src, photo_alt, photo_description, photo_copyright, photo_nr);
@@ -41,7 +40,7 @@ function getPhoto(foldername) {
 
 function displayPhotoThumbnail(photo_id, photo_src, photo_alt, photo_description, photo_copyright, photo_nr) {
     return `
-        <img onclick="openDialogPhotoOverlay(event, '${photo_src}', '${photo_alt}', '${photo_description}', '${photo_copyright}', '${photo_nr}')"
+        <img onclick="openDialogPhotoOverlay('${photo_src}', '${photo_alt}', '${photo_description}', '${photo_copyright}', '${photo_nr}')"
             class="ImagePhotoGallery"
             id=${photo_id}
             src=${photo_src}
