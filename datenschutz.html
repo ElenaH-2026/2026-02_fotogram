@@ -9,19 +9,19 @@
     
 </head>
 <body>
-    <header>
-        <div class="MarginLeftRight ContainerHeaderFooter">
+    <header class="PositionFixedHeader">
+        <div class="PaddingLeftRight ContainerHeaderFooter">
             <a class="HeaderLinks" href="index.html">
                 <img class="HeaderLogo"
                     src="./img/logo-fotogram.svg" 
                     alt="Fotogram Logo"/>
-                Fotogram<br>Elena und Michi
+                Fotogram<br>Elena & Michi
             </a>
             <a class="HeaderLinks" href="#">
+                <span class="HideMobile600">Kontakt</span>
                 <img class="LogosIcons" 
                     src="./img/icon-mail.svg" 
                     alt="E-Mail Symbol zur Kontaktaufnahme"/>
-                Kontakt
             </a>
         </div>
     </header>
@@ -32,36 +32,34 @@
         </div>
     </main>
 
-    <footer>
-        <div class="MarginLeftRight ContainerHeaderFooter">
+    <footer class="PositionFixedFooter">
+        <div class="PaddingLeftRight ContainerHeaderFooter">
             <div class="ChildContainerFooter">
-                <span>Fotos:</span>
-                <img 
-                    src="./img/copyright.svg" 
-                    alt="Copyright Symbol"/>
-                <span>Michael Hiener</span>
+                <span>Fotos: &#169</span>
+                <span class="HideMobile700"> M. & E. Hiener</span>
+                <span class="ShowMobile700">M. & E. H.</span>
             </div>
             <div>
                 <a target="_blank" href="https://github.com/ElenaH-2026">
-                    <img class="LogosIcons" 
+                    <img class="MobileLogosIcons LogosIcons" 
                         src="./img/logo-github-invertocat-white.svg" 
                         alt="GitHub Logo"/>
                 </a>
-                <a href="#">
+                <a class="HideMobile600" href="#">
                     <img class="LogosIcons" 
                         src="./img/icon-mail.svg" 
                         alt="E-Mail Symbol zur Kontaktaufnahme"/>
                 </a>
                 <a target="_blank" href="https://de.linkedin.com/in/elena-hiener">
-                    <img class="LogosIcons" 
+                    <img class="MobileLogosIcons LogosIcons" 
                         src="./img/logo-linkedin-white.png" 
                         alt="LinkedIn Logo"/>
                 </a>
             </div>
             <div class="ChildContainerFooter">
                 <a href="./impressum.html">Impressum</a>
-                |
-                <a href="./datenschutz.html">Datenschutz</a>
+                <span class="HideMobile700">&#8226</span>
+                <a class="HideMobile700" href="./datenschutz.html">Datenschutz</a>
             </div>
         </div>
     </footer>

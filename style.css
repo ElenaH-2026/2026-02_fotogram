@@ -1,10 +1,12 @@
 :root {
     --color-dark: rgb(1, 14, 3);
-    --color-middle: rgb(81, 100, 10);
     --color-light: rgb(212, 237, 119);
     --color-font: rgba(255, 255, 255, 1);
     --color-font-soft: rgba(255, 255, 255, 0.5);
     --shadow: 0px 0px 4px var(--color-light);
+    --border-radius-small: 4px 24px;
+    --border-radius-small-reverse: 24px 4px;
+    --border-radius-big: 8px 48px;
 }
 
 /* css -> general */
@@ -40,13 +42,25 @@ a:hover {
     text-shadow: var(--shadow);
 }
 
-h1, h2 {
+h1, h2, h3 {
     text-align: center;
     margin: 0;
     padding: 16px;
 }
 
-.ShowMobile {
+h1 {
+    font-size: 32px;
+}
+
+h2, h3 {
+    font-size: 24px;
+}
+
+.ShowMobile700 {
+    display: none;
+}
+
+.ShowMobile410 {
     display: none;
 }
 
@@ -64,8 +78,29 @@ h1, h2 {
 
 
 button {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border-radius: var(--border-radius-small);
     cursor: pointer;
 }
+
+.button-reverse {
+    border-radius: var(--border-radius-small-reverse);
+}
+
+button img {
+    height: 24px;
+}
+
+/* class below only needed, if icons imported with google-fonts */
+/* .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+} */
+
 
 /* css -> header and footer */
 
@@ -74,19 +109,14 @@ header, footer {
     display: flex;
     justify-content: center;
     border: 1px solid var(--color-light);
+    border-radius: var(--border-radius-big);
     filter: drop-shadow(var(--shadow));
 }
 
-header {
-    border-radius: 0 0 8px 48px;
-}
-
 footer {
-    border-radius: 8px 48px 0 0;
     padding-top: 8px;
     padding-bottom: 8px;
 }
-
 
 .PositionFixedHeader {
     position: fixed;
@@ -172,7 +202,7 @@ main {
 .ImagePhotoGallery {
     cursor: pointer;
     border: 1px solid var(--color-font-soft);
-    border-radius: 4px 24px;
+    border-radius: var(--border-radius-small);
     object-fit: cover;
     aspect-ratio: 4/3;
     width: 100px;
@@ -187,11 +217,11 @@ main {
 
 dialog {
     background-color: var(--color-dark);
-    color: var(--color-light);
+    color: var(--color-font);
     justify-self: center;
     margin: 160px 40px 80px;
     border: 1px solid var(--color-light);
-    border-radius: 8px 48px;
+    border-radius: var(--border-radius-big);
     filter: drop-shadow(var(--shadow));
     padding: 0 24px;
     height: auto;
@@ -208,8 +238,12 @@ dialog {
 
 dialog header {
     background-color: var(--color-dark);
-    justify-content: space-between;
+    justify-content: flex-end;
     border: 1px solid var(--color-light);
+}
+
+dialog h3 {
+    flex: 1;
 }
 
 dialog footer {
@@ -246,7 +280,7 @@ figure {
 
 
 .ImagePhotoOverlay {
-    border-radius: 4px 24px;
+    border-radius: var(--border-radius-small);
     filter: drop-shadow(var(--shadow));
     padding-bottom: 8px;
     width: auto;
@@ -272,6 +306,14 @@ figure {
 }
 
 @media (max-width: 700px) {
+    .HideMobile700 {
+        display: none;
+    }
+
+    .ShowMobile700 {
+        display: block;
+    }
+
     .ChildContainerFooter {
         flex-direction: column;
         gap: 0;
@@ -294,12 +336,20 @@ figure {
         padding-right: 40px;
     }
     
-    .HideMobile {
+    .HideMobile600 {
         display: none;
     }
 
-    .ShowMobile {
+    .ShowMobile600 {
         display: block;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2, h3 {
+        font-size: 20px;
     }
 
     dialog {
@@ -315,6 +365,14 @@ figure {
         padding-right: 24px;
     }
 
+    .HideMobile410 {
+        display: none;
+    }
+
+    .ShowMobile410 {
+        display: block;
+    }
+
     .MobileLogosIcons {
         height: 24px;
     }
@@ -323,5 +381,13 @@ figure {
         margin-left: 12px;
         margin-right: 12px;
         padding: 0 4px;
+    }
+
+    dialog footer {
+        gap: 24px;
+    }
+
+    button img {
+        height: 20px;
     }
 }

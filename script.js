@@ -52,7 +52,11 @@ function displayPhotoOverlay(photo_src, photo_alt, photo_description, photo_copy
     return `
         <header>
             <h3>${photo_description}</h3>
-            <button onclick="closeDialogPhotoOverlay()">x</button>
+            <button onclick="closeDialogPhotoOverlay()">
+                <img 
+                    src="./img/icon-close-48-dark.svg" 
+                    alt="X-Symbol zum Schließen des Dialogfensters"/>
+            </button>
         </header>
         <section class="SectionPhotoOverlay">
             <figure>
@@ -63,8 +67,16 @@ function displayPhotoOverlay(photo_src, photo_alt, photo_description, photo_copy
             </figure>
         </section>
         <footer>
-            <button>(<=)</button>
+            <button class="button-reverse">
+                <img 
+                    src="./img/icon-arrow-back-48-dark.svg" 
+                    alt="Pfeil-Symbol nach links, um zum vorherigen Bild zu gelangen."/>
+            </button>
             <span>${photo_nr}</span>
-            <button>(=>)</button>
+            <button>
+                <img 
+                    src="./img/icon-arrow-forward-48-dark.svg" 
+                    alt="Pfeil-Symbol nach rechts, um zum nächsten Bild zu gelangen."/>
+            </button>
         </footer>`;
 }
