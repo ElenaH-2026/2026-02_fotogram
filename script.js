@@ -1,6 +1,7 @@
 const DIALOG_REF = document.getElementById("#DialogPhotoOverlay");
 const FOLDER_LIST = document.getElementsByClassName("ImageContainerPhotoGallery");
 let photos_thumbnail = "";
+let photos_displayed = [];
 let photo_overlay = document.getElementById("#PhotoOverlay");
 
 function openDialogPhotoOverlay(photo_src, photo_alt, photo_description, photo_copyright, photo_nr) {
@@ -9,7 +10,6 @@ function openDialogPhotoOverlay(photo_src, photo_alt, photo_description, photo_c
     photo_overlay.innerHTML = displayPhotoOverlay(photo_src, photo_alt, photo_description, photo_copyright, photo_nr);
 }
 
-// Warum schließt sich das Fenster, auch wenn ich auf den Header/Footer oder das Dialogfenster selbst klicke??
 function closeDialogPhotoOverlay() {
     DIALOG_REF.close();
 }
@@ -20,8 +20,10 @@ function initDisplayPhotoGallery() {
         let folder = FOLDER_LIST[i].id;
         photos_thumbnail = document.getElementById(folder);
         getPhoto(folder);
-        }   
     }
+    console.log(photos_displayed);
+    
+}
 
 function getPhoto(foldername) {
     let photos_per_folder = All_PHOTOS[foldername];
@@ -34,8 +36,25 @@ function getPhoto(foldername) {
         let photo_copyright = "&#169 " + photos_per_folder[i].copyright;
         let photo_nr = photos_per_folder[i].folder + ":<br>" + (i+1) + " von " + photos_per_folder.length;
         
+        let photo_value = new PhotoData(photo_id, photo_src, photo_alt, photo_description, photo_copyright, photo_nr);
+        
+        let Photo = [{photoId:photo_value.photoId}, {photoSrc:photo_value.photoSrc}];
+        console.log(Photo);
+        photos_displayed.push(Photo);
+
         photos_thumbnail.innerHTML += displayPhotoThumbnail(photo_id, photo_src, photo_alt, photo_description, photo_copyright, photo_nr);
     }
+    
+    
+}
+
+function PhotoData(photo_id, photo_src, photo_alt, photo_description, photo_copyright, photo_nr) {
+    this.photoId = photo_id;
+    this.photoSrc = photo_src;
+    this.photoAlt = photo_alt;
+    this.photoDescription = photo_description;
+    this.photoCopyright = photo_copyright;
+    this.photoNr = photo_nr;
 }
 
 function displayPhotoThumbnail(photo_id, photo_src, photo_alt, photo_description, photo_copyright, photo_nr) {
