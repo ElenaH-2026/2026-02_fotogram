@@ -15,14 +15,19 @@ function closeDialogPhotoOverlay() {
 }
 
 function initDisplayPhotoGallery() {
+    getFolder();
+    console.log(photos_thumbnail);
+    
+    console.log(photos_displayed);
+    
+}
 
+function getFolder() {
     for (let i = 0; i < FOLDER_LIST.length; i++) {
         let folder = FOLDER_LIST[i].id;
         photos_thumbnail = document.getElementById(folder);
         getPhoto(folder);
     }
-    console.log(photos_displayed);
-    
 }
 
 function getPhoto(foldername) {
@@ -39,7 +44,7 @@ function getPhoto(foldername) {
         let photo_value = new PhotoData(photo_id, photo_src, photo_alt, photo_description, photo_copyright, photo_nr);
         
         let Photo = [{photoId:photo_value.photoId}, {photoSrc:photo_value.photoSrc}];
-        console.log(Photo);
+        // console.log(Photo);
         photos_displayed.push(Photo);
 
         photos_thumbnail.innerHTML += displayPhotoThumbnail(photo_id, photo_src, photo_alt, photo_description, photo_copyright, photo_nr);
@@ -77,14 +82,12 @@ function displayPhotoOverlay(photo_src, photo_alt, photo_description, photo_copy
                     alt="X-Symbol zum Schließen des Dialogfensters"/>
             </button>
         </header>
-        <section class="SectionPhotoOverlay">
-            <figure>
-                <img class="ImagePhotoOverlay"
-                    src=${photo_src}
-                    alt=${photo_alt}
-                <figcaption>${photo_copyright}</figcaption>
-            </figure>
-        </section>
+        <figure>
+            <img class="ImagePhotoOverlay"
+                src=${photo_src}
+                alt=${photo_alt}
+            <figcaption><span class="figcaption">${photo_copyright}</span></figcaption>
+        </figure>
         <footer>
             <button class="button-reverse">
                 <img 

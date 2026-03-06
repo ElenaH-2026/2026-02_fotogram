@@ -1,16 +1,16 @@
-// folder:
+/* folder:*/
 const ELBA = "Elba";
 const NZ_FIJI = "Neuseeland und Fiji";
 const USA_HAWAII = "USA und Hawaii";
 const OTHER = "Weitere Orte";
 
-// copyright:
+/* copyright:*/
 const MICHI = "Michael Hiener";
 const ELENA = "Elena Hiener";
 
-// Fotos komprimieren: https://www.irfanview.com/
+/* Fotos komprimieren: https://www.irfanview.com/*/
 
-// Key must be identical to foldername AND container-id !!
+/* Key must be identical to foldername AND container-id !!*/
 
 const All_PHOTOS = {
     "elba":[
